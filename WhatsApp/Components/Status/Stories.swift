@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Stories: View {
+    let storiesCircles = ["circle.one", "circle.two", "circle.three", "circle.four", "circle.eight", "circle.all"]
     var body: some View {
         VStack {
             HStack {
@@ -16,45 +17,47 @@ struct Stories: View {
                     .foregroundColor(Color.gray)
                 Spacer()
             }
-            .padding(.bottom, 5.0)
-            .padding(.horizontal)
-            .frame(height: 50, alignment: .bottom)
+            .padding(.leading)
+            .frame(height: 40, alignment: .bottom)
             VStack {
                 ForEach(0..<50, id: \.self) { item in
                     Button(action: {}) {
                         HStack {
-                            HStack {
-                                Image(systemName: "network")
-                                    .font(.system(size: 50))
-                                    .foregroundColor(.gray)
+                            ZStack {
+                                Image("sara")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                    .cornerRadius(100)
+                                
+                                Image(storiesCircles[Int.random(in: 0...5)])
+                                    .resizable()
+                                    .frame(width: 60, height: 60)
+                                    .cornerRadius(100)
                             }
-                            .padding(.leading, 10.0)
-                            HStack {
+                            
+                            HStack(alignment: .top) {
                                 VStack(alignment: .leading) {
+                                    Divider()
                                     Text("Dylan West")
                                         .fontWeight(.bold)
                                         .foregroundColor(Color(.black))
+                                        .padding(.top, 5.0)
                                     Text("23m ago")
                                         .font(.system(size: 14))
                                         .foregroundColor(Color(.systemGray))
+                                        .frame(height: 35)
                                 }
-                                .frame(height: 60, alignment: .center)
-                                
-                                Spacer()
                             }
-                            .frame(height: 60, alignment: .center)
-                            
                         }
+                        .frame(alignment: .center)
                     }
-                    .frame(height: 60, alignment: .center)
+                    .padding(.leading)
                     .background(Color.white)
-                    Divider()
-                    
                 }
-                
             }
-            .padding(.bottom, 100.0)
+            .border(Color(.systemGray5))
             .background(Color.white)
+            
         }
         
     }

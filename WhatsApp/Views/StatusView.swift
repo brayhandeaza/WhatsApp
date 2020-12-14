@@ -9,14 +9,28 @@ import SwiftUI
 struct StatusView: View {
     @State var searchValue = ""
     @State var offset: CGFloat = 0
+    @State var title = ""
     var body: some View {
         VStack {
-            Text("\(offset)")
-            Header(title: "Status")
-            
+            HStack {
+                Text("Privacy")
+                    .font(.callout)
+                    .foregroundColor(.blue)
+                Spacer()
+                Text("\(self.title)")
+                    .fontWeight(.bold)
+                    .padding(.trailing, 50)
+                Spacer()
+            }
+            .padding(.horizontal)
             ScrollView {
                 GeometryReader { geo -> AnyView? in
-                    self.offset = geo.frame(in: .global).minY
+                    let thisOffset = geo.frame(in: .global).minY
+                    if thisOffset < -175 {
+                        self.title = "Status"
+                    } else {
+                        self.title = ""
+                    }
                     return nil
                 }
                 
@@ -29,8 +43,7 @@ struct StatusView: View {
         }
         .padding(.top, 50.0)
         .background(Color(.systemGray6))
-        .ignoresSafeArea()
-        //        .ignoringSafeArea(.all)
+        .ignoresSafeArea(.all)
     }
     
 }
