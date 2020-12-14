@@ -12,11 +12,6 @@ struct ContentView: View {
         TabView(selection: $selection) {
             StatusView()
                 .tabItem {
-                    Image(systemName: "circle.dashed")
-                    Text("Status") }
-                .tag(1)
-            Text("\(selection)")
-                .tabItem {
                     Image(systemName: "phone")
                     Text("Calls") }
                 .tag(1)

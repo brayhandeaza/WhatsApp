@@ -11,6 +11,7 @@ struct Stories: View {
     let storiesCircles = ["circle.one", "circle.two", "circle.three", "circle.four", "circle.eight", "circle.all"]
     var body: some View {
         VStack {
+            
             HStack {
                 Text("RECENT UPDATES")
                     .font(.system(size: 14))
@@ -34,6 +35,7 @@ struct Stories: View {
                                     .frame(width: 60, height: 60)
                                     .cornerRadius(100)
                             }
+                            .offset(y: 10)
                             
                             HStack(alignment: .top) {
                                 VStack(alignment: .leading) {
@@ -45,16 +47,19 @@ struct Stories: View {
                                     Text("23m ago")
                                         .font(.system(size: 14))
                                         .foregroundColor(Color(.systemGray))
-                                        .frame(height: 35)
+                                        .frame(height: 30)
                                 }
                             }
                         }
                         .frame(alignment: .center)
                     }
                     .padding(.leading)
+                    .frame(height: 65)
                     .background(Color.white)
                 }
             }
+            .padding(.bottom, 100
+            )
             .border(Color(.systemGray5))
             .background(Color.white)
             
