@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64540E732587DE8200944F96 /* RenderStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64540E722587DE8200944F96 /* RenderStatusView.swift */; };
 		64663D252587101E00F056CA /* GlobalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64663D242587101E00F056CA /* GlobalStorage.swift */; };
 		64728BB1258541F3005F9CA5 /* WhatsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64728BB0258541F3005F9CA5 /* WhatsAppApp.swift */; };
 		64728BB3258541F3005F9CA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64728BB2258541F3005F9CA5 /* ContentView.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		41297AAFB63C8DBDB24FD0D4 /* Pods_WhatsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64540E722587DE8200944F96 /* RenderStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderStatusView.swift; sourceTree = "<group>"; };
 		64663D242587101E00F056CA /* GlobalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalStorage.swift; sourceTree = "<group>"; };
 		64728BAD258541F3005F9CA5 /* WhatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64728BB0258541F3005F9CA5 /* WhatsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppApp.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				64728BCD25869322005F9CA5 /* StatusView.swift */,
+				64540E722587DE8200944F96 /* RenderStatusView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,7 +132,6 @@
 				6E356EDA064C02C9BDCA48D2 /* Pods-WhatsApp.debug.xcconfig */,
 				BDD4906DC28647FD3AB9F1D8 /* Pods-WhatsApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64540E732587DE8200944F96 /* RenderStatusView.swift in Sources */,
 				64728BB3258541F3005F9CA5 /* ContentView.swift in Sources */,
 				64728BB1258541F3005F9CA5 /* WhatsAppApp.swift in Sources */,
 				64BCF4CF2586AB16008B8FDA /* MyStatus.swift in Sources */,
